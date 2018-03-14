@@ -10,13 +10,10 @@ FBullCowGame::FBullCowGame()
 {
 	bWinStatus = false;
 	MyCurrentTry = 0;
+	MyHiddenWord = "";
 }
 
 // Getters
-// The getter only returns a number, it shouldn't change any
-// numbers, so we want to protect against that. Use const
-// const at the end of a member function will not allow us to change
-// any member  variable. 
 int  FBullCowGame::GetMaxTries() const {
 	TMap<int, int> WordLengthToMaxTries{ { 3, 6 },{ 4, 8 },{ 5, 10 },{ 6, 14 },{ 7, 20 } };
 	return WordLengthToMaxTries[MyHiddenWord.length()];
@@ -59,7 +56,7 @@ FBullCowCount FBullCowGame::SubmitValidGuess(std::string Guess)
 {
 	MyCurrentTry++;
 
-	FBullCowCount BCCount; // This initialises to 0, since the struct is defined like that
+	FBullCowCount BCCount; 
 	int HWChar, GChar;
 	int WordLength = MyHiddenWord.length(); // Assuming Guess and Hidden word have same length
 
@@ -92,7 +89,7 @@ bool FBullCowGame::IsIsogram(std::string Word) const
 		return true;
 	}
 
-	TMap<char, bool> LetterSeen;	// Map letters to bools. letters previously seen are marked true so we can check for duplicates
+	TMap<char, bool> LetterSeen;	// letters previously seen are marked true to can check for duplicates
 	for (auto Letter : Word) {
 		Letter = tolower(Letter);
 

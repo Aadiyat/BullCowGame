@@ -76,7 +76,7 @@ void PlayGame()
 std::string GetValidGuess()
 {
 	std::string Guess = "";
-	EGuessStatus Status = EGuessStatus::Invalid; // Initialise Status to invalid till we confirm it's OK
+	EGuessStatus Status = EGuessStatus::Invalid; // Initialise Status to invalid as a placeholder
 
 	do {
 		int currentTry = BCGame.getCurrentTry();
@@ -89,7 +89,7 @@ std::string GetValidGuess()
 
 		// Based on word status send error message to user or continue with valid guess
 		switch (Status) {
-		case EGuessStatus::Wrong_Length: // Same as saying if Status == EGuessStatus::Wrong_Length
+		case EGuessStatus::Wrong_Length: 
 			std::cout << "Please enter a " << BCGame.getHiddenWordLength() << " letter word.\n\n";
 			break;
 		case EGuessStatus::Not_Isogram:

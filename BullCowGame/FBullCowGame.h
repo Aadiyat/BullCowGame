@@ -1,7 +1,3 @@
-/*
-The game logic (no view code or direct user interaction)
-the game is a simple guess the word game base on Mastermind
-*/
 
 #pragma once
 #include <string>
@@ -26,7 +22,7 @@ enum class EGuessStatus
 class FBullCowGame
 {
 public:
-	FBullCowGame(); //constructor. has no return type
+	FBullCowGame(); /
 
 	int GetMaxTries() const;
 	int getCurrentTry() const;
@@ -39,7 +35,7 @@ public:
 	std::string SetHiddenWord();
 	FBullCowCount SubmitValidGuess(std::string Guess);
 
-	// Private section has variables that the game logic uses
+	
 private:
 	// See constructor for initialisation
 	int  MyCurrentTry;
