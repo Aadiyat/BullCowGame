@@ -44,7 +44,9 @@ void PrintIntro()
 	std::cout << "                \\________/                " << std::endl;
 	std::cout << "                 \\o____o/                 " << std::endl;
 	std::cout << "___________________________________________" << std::endl;
-
+	std::cout << "Players must guess what the hiddden isogram is.\n";
+	std::cout << "An isogram is a word with no repeating leters.\n";
+	std::cout << "For example, 'computer' is an isogram.\n";
 	std::cout << std::endl;
 
 	return;

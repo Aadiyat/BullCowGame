@@ -22,7 +22,7 @@ enum class EGuessStatus
 class FBullCowGame
 {
 public:
-	FBullCowGame(); /
+	FBullCowGame();
 
 	int GetMaxTries() const;
 	int getCurrentTry() const;
