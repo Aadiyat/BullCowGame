@@ -31,7 +31,7 @@ void FBullCowGame::Reset()
 	// Initialise Hidden Word
 	// Reset MyCurrentTry and MyMaxTries
 
-	MyHiddenWord = SetHiddenWord();
+	MyHiddenWord = SetHiddenWord();	// Prompt user to choose difficulty and set corresponding hidden word
 	MyCurrentTry = 1;
 	bWinStatus = false;
 
@@ -60,7 +60,7 @@ FBullCowCount FBullCowGame::SubmitValidGuess(std::string Guess)
 	int HWChar, GChar;
 	int WordLength = MyHiddenWord.length(); // Assuming Guess and Hidden word have same length
 
-											  // Loop through all letters in the hidden word
+	// Loop through all letters in the hidden word
 	for (HWChar = 0; HWChar < WordLength; HWChar++) {
 		// Compare letters against the guess one at a time
 		for (GChar = 0; GChar < WordLength; GChar++) {
@@ -83,6 +83,7 @@ FBullCowCount FBullCowGame::SubmitValidGuess(std::string Guess)
 	return BCCount;
 }
 
+// Checks if the guess is an isogram
 bool FBullCowGame::IsIsogram(std::string Word) const
 {
 	if (Word.length() < 2) {	// Treat 0 and 1 letter strings as isograms

@@ -117,7 +117,7 @@ void PrintGuess(std::string Guess)
 // Asks the player if they want to play again. Returns true if the player enters y or Y
 bool AskToPlayAgain()
 {
-	std::cout << "Do you want to play again with the same hidden word? (Y/N) ";
+	std::cout << "Do you want to play again? (Y/N) ";
 	std::string Response = "";
 	std::getline(std::cin, Response);
 	std::cout << std::endl;
